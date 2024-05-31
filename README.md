@@ -27,7 +27,7 @@ This bot was made using JDA 5 and a roblox api https://groups.roblox.com/docs/in
 ![image](https://github.com/OsRaMoSaO/Group-shouter/assets/83728344/ab9b861c-96b6-4407-9ab9-f0cdeb2e5b7f)
 
 > This is what the bot returns in specified channel:
-![image](https://github.com/OsRaMoSaO/Group-shouter/assets/83728344/3c6c2721-37a0-49b3-9417-cf1433a4e7b7)
+![image](https://github.com/OsRaMoSaO/Group-shouter/assets/83728344/4c0da16c-1aad-4b68-ac4f-3e99a046e082)
 
 This ofcourse works for any keywords, and keywords need to cycle. Meaning the bot will never send the started message twice or ended message twice, started event <-> ended event.
 

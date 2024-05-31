@@ -60,6 +60,7 @@ public class httpChecker {
             JsonNode jsonNode = objectMapper.readTree(responseBody);
             // Navigate to shout.body
             JsonNode shoutNode = jsonNode.path("shout");
+
             if (shoutNode.isMissingNode()) {
                 return false; // shout node is not present
             }

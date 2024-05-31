@@ -64,7 +64,6 @@ public class httpChecker {
             if (shoutNode.isMissingNode()) {
                 return false; // shout node is not present
             }
-
             String content = getData(responseBody, "body");
 
             if (content.toLowerCase().contains(startedWord)) {

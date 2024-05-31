@@ -66,6 +66,7 @@ public class httpChecker {
             }
 
             String content = getData(responseBody, "body");
+
             if (content.toLowerCase().contains(startedWord)) {
                 if (prevStatus == null)
                 {

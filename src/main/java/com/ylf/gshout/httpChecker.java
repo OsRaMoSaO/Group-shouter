@@ -14,7 +14,6 @@ public class httpChecker {
     private final OkHttpClient client = new OkHttpClient();
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    private String lastDate = null;
     private String prevStatus = null;
 
     public String[] checkCondition() {
@@ -31,7 +30,6 @@ public class httpChecker {
 
             boolean n = parseShoutBodyFromResponse(responseBody);
             if (!n){
-                System.out.println("Returning null");
                 return null;
             }
 
@@ -58,7 +56,6 @@ public class httpChecker {
             String startedWord = shouterBot.config.get("KEYWORD_STARTED").toLowerCase();
             String endedWord = shouterBot.config.get("KEYWORD_ENDED").toLowerCase();
 
-            System.out.println(startedWord + " | " + endedWord);
             // Parse the JSON response
             JsonNode jsonNode = objectMapper.readTree(responseBody);
             // Navigate to shout.body
@@ -68,7 +65,6 @@ public class httpChecker {
             }
 
             String content = getData(responseBody, "body");
-            System.out.println(prevStatus);
             if (content.toLowerCase().contains(startedWord)) {
                 if (prevStatus == null)
                 {

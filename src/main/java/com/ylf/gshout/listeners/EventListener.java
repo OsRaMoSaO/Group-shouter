@@ -5,24 +5,18 @@ import java.util.TimerTask;
 import com.ylf.gshout.shouterBot;
 import com.ylf.gshout.httpChecker;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
-import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 public class EventListener extends ListenerAdapter {
-
-    private int x = 0;
-
-
     @Override
     public void onReady(ReadyEvent event) {
 
 
         System.out.println("Bot is ready!");
-        FixedIntervalLoop loop = new FixedIntervalLoop();
 
         String channelID = shouterBot.config.get("CHANNEL");
-        TextChannel channel = event.getJDA().getTextChannelById("748224288439533709");
+        TextChannel channel = event.getJDA().getTextChannelById(channelID);
 
         String tagEveryone = shouterBot.config.get("TAG_EVERYONE");
 
